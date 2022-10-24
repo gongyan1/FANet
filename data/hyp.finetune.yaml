@@ -1,0 +1,40 @@
+# Hyperparameters for VOC finetuning
+# python train.py --batch 64 --weights yolov5m.pt --data voc.yaml --img 512 --epochs 50
+# See tutorials for hyperparameter evolution https://github.com/ultralytics/yolov5#tutorials
+
+
+# Hyperparameter Evolution Results
+# Generations: 306
+#                   P         R     mAP.5 mAP.5:.95       box       obj       cls
+# Metrics:        0.6     0.936     0.896     0.684    0.0115   0.00805   0.00146
+
+lr0: 0.0032              # 学习率
+lrf: 0.12                # 余弦退火超参数
+momentum: 0.843          # 学习率动量
+weight_decay: 0.00036    # 权重衰减系数
+warmup_epochs: 2.0       # giou损失系数
+warmup_momentum: 0.5
+warmup_bias_lr: 0.05     #
+box: 0.0296
+cls: 0.243               # 分类损失系统
+cls_pw: 0.631            # 分类BCELoss中正样本的权重
+obj: 0.301               # 有无物体的损失
+obj_pw: 0.911            # 有无物体BCELoss中正样本的权重
+iou_t: 0.2               # 标签与anchor的iou阈值 iou training threshold
+anchor_t: 2.91           # 标签的长h 宽w / anchor 的长h_a 宽w_a阈值,即 h/h_a , w/w_a都要在(1/2.91,2.91)之间的anchor-multiple thershold
+# anchors: 3.63
+fl_gamma: 0.0            # 设置为0，表示不使用focal loss(efiicientDet default is gamma = 1.5)
+
+# 下面是数据增强的代码
+hsv_h: 0.0138            # 色调
+hsv_s: 0.664             # 饱和度
+hsv_v: 0.464             # 明度
+degrees: 0.373           # 旋转角度
+translate: 0.245         # 水平和垂直平移
+scale: 0.898             # 缩放
+shear: 0.602             # 剪切
+perspective: 0.0         # 透视变换参数
+flipud: 0.00856          # 上下旋转
+fliplr: 0.5              # 左右旋转
+mosaic: 1.0              # 马赛克增强
+mixup: 0.243             # mixup系数

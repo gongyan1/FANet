@@ -1,0 +1,36 @@
+# COCO 2017 dataset http://cocodataset.org - first 128 training images
+# Train command: python train.py --data coco128.yaml
+# Default dataset location is next to /yolov5:
+#   /parent_folder
+#     /coco128
+#     /yolov5
+
+
+# download command/URL (optional)
+#download: https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+#train: /home/ubuntu/dataset/kaist_pixel_level/preparing_data/train/images/ # 128 images
+#val: /home/ubuntu/dataset/kaist_pixel_level/preparing_data/val/images/  # 128 images
+
+
+train: /home/ubuntu/dataset/kaist dataset/gy_copy/train/train.txt # 128 images
+val: /home/ubuntu/dataset/kaist dataset/gy_copy/train/val.txt  # 128 images
+test: /home/ubuntu/dataset/kaist dataset/gy_copy/test/thermal/
+
+
+
+#train: /home/ubuntu/dataset/kaist dataset/gy_copy/train/train_visible.txt # 128 images
+#val: /home/ubuntu/dataset/kaist dataset/gy_copy/train/val_visible.txt  # 128 images
+#test: /home/ubuntu/dataset/kaist dataset/gy_copy/test/visible/
+
+
+
+
+
+
+# number of classes
+nc: 1
+
+# class names
+names: ['person']
