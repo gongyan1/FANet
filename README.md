@@ -16,6 +16,7 @@ tion.
 2. Processed KAIST Dataset: Due to the high similarity of the KAIST dataset, current researchers have adopted the data processing scheme of drawing frames and deleting pedestrians in small areas. For ease of use, you can directly refer to the processed dataset published in the  [Task-conditioned Domain Adaptation for Pedestrian Detection in Thermal Imagery](https://drive.google.com/file/d/14A3K2IPPPC8-BwPh-YjeHARaZqjnR655/view).  We normalize and convert to (x, y, w, h) bounding box format, where x and y represent the center of the object, and w and h represent the width and height of the object. Please refer to [Baidu cloud link](https://pan.baidu.com/s/1SLRvgH_eCoiqDhLUVW4OlA?pwd=q4mt).
 
 ### CVC-14 Dataset
+
 1. Origin CVC-14 dataset: The dataset is composed by two sets of sequences. These sequences are named as the day and night sets, which refers to the moment of the day they were acquired, and Visible and FIR depending the camera that was user to recor the sequences. Please refer to [Downloading link](http://adas.cvc.uab.es/elektra/enigma-portfolio/cvc-14-visible-fir-day-night-pedestrian-sequence-dataset/).
 2. Processed CVC-14 Dataset: We normalize and convert to (x, y, w, h) bounding box format, where x and y represent the center of the object, and w and h represent the width and height of the object. Please refer to [Baidu cloud link](https://pan.baidu.com/s/1SLRvgH_eCoiqDhLUVW4OlA?pwd=q4mt).
 Note: In our paper, we do not experiment on cvc-14.    
@@ -56,11 +57,13 @@ MR-d, MR-n, and MR-all represent the Miss Rate in day, night, and all scenes. Su
 C or T after the name of a method represents the input is a color or thermal image. ”−”
 denotes the corresponding information is not reported in the paper. Bold indicates best
 performance.
+
 ![](./result1.png)
 
 Comparison of the proposed FAM with existing methods on ReID datasets
 Market1501 and Duke. Nf is the number of features used in the inference stage. Bold
-indicates best performance; italic with underline represents the second best performance
+indicates best performance; italic with underline represents the second best performance.
+
 ![](./result2.png)
 
 
